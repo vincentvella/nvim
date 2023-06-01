@@ -5,35 +5,35 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'tanvirtin/monokai.nvim'
 
+  -- Treesitter
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
-
   use {
     'nvim-treesitter/nvim-treesitter',
     run = function()
       local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
       ts_update()
-    end, }
-
-  use("nvim-treesitter/playground")
-  use("theprimeagen/harpoon")
-  use("theprimeagen/refactoring.nvim")
-  use("mbbill/undotree")
-  use("tpope/vim-fugitive")
+    end,
+  }
   use("nvim-treesitter/nvim-treesitter-context");
+  use("nvim-treesitter/playground")
 
+
+  -- Editor UI
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
-      'nvim-tree/nvim-web-devicons', -- optional
+      'nvim-tree/nvim-web-devicons',
     },
     config = function()
       require("nvim-tree").setup {}
     end
   }
+  use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
 
+  -- LSP
   use {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v1.x',
@@ -57,15 +57,21 @@ return require('packer').startup(function(use)
     }
   }
 
+  -- Editor plugins
   use("github/copilot.vim")
-
   use({
     "Pocco81/auto-save.nvim",
     config = function()
       require("auto-save").setup {
         -- your config goes here
-        -- or just leave it empty :)
       }
     end,
   })
+
+  -- Extras
+  use("theprimeagen/harpoon")
+  use("theprimeagen/refactoring.nvim")
+  use("mbbill/undotree")
+  use("tpope/vim-fugitive")
+
 end)
