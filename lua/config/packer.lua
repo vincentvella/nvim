@@ -32,6 +32,10 @@ return require('packer').startup(function(use)
     end
   }
   use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
 
   -- LSP
   use {
@@ -73,5 +77,4 @@ return require('packer').startup(function(use)
   use("theprimeagen/refactoring.nvim")
   use("mbbill/undotree")
   use("tpope/vim-fugitive")
-
 end)
