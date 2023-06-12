@@ -61,6 +61,7 @@ return require('packer').startup(function(use)
       { 'rafamadriz/friendly-snippets' },
     }
   }
+  use "jose-elias-alvarez/null-ls.nvim"
 
   -- Editor plugins
   use("github/copilot.vim")
@@ -70,5 +71,4 @@ return require('packer').startup(function(use)
   use("theprimeagen/refactoring.nvim")
   use("mbbill/undotree")
   use("tpope/vim-fugitive")
-  use 'mfussenegger/nvim-lint'
 end)
