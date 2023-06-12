@@ -1,5 +1,7 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+
+-- Disabled :Ex because netrw __should__ be disabled by default with nvim-tree
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- VSCode style up/down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
