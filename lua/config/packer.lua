@@ -1,3 +1,4 @@
+-- PackerInstall | PackerClean to install and clean plugins
 vim.cmd.packadd('packer.nvim')
 
 return require('packer').startup(function(use)
@@ -63,18 +64,11 @@ return require('packer').startup(function(use)
 
   -- Editor plugins
   use("github/copilot.vim")
-  use({
-    "Pocco81/auto-save.nvim",
-    config = function()
-      require("auto-save").setup {
-        -- your config goes here
-      }
-    end,
-  })
 
   -- Extras
   use("theprimeagen/harpoon")
   use("theprimeagen/refactoring.nvim")
   use("mbbill/undotree")
   use("tpope/vim-fugitive")
+  use 'mfussenegger/nvim-lint'
 end)
