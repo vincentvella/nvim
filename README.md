@@ -4,7 +4,9 @@
 - brew install ripgrep
 - brew install nvim
 - alias vi/vim -> nvim
-- vim .
+- vim ./lua/config/packer.lua
 - :so
 - :PackerSync
+- vim ./init.lua
+- :so
 - :Copilot setup
