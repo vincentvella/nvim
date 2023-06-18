@@ -15,4 +15,3 @@ require("nvim-tree").setup()
 --- end nvim tree setup
 
 require("config")
-

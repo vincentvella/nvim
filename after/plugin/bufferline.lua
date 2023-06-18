@@ -51,7 +51,7 @@ local function close_current_and_open_next_buffer()
   end
 end
 
-vim.api.nvim_create_user_command("DeleteUnnamedBuffer", close_current_and_open_next_buffer, {})
+vim.api.nvim_create_user_command("CloseCurrentBuffer", close_current_and_open_next_buffer, {})
 
 local map = vim.api.nvim_set_keymap
 local default_keymap_options = { noremap = true, silent = true }
