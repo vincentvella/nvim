@@ -82,6 +82,7 @@ return require('packer').startup(function(use)
       { 'rafamadriz/friendly-snippets' },
     }
   }
+  use 'b3nj5m1n/kommentary'
   use({
     "jose-elias-alvarez/null-ls.nvim",
     requires = { { "nvim-lua/plenary.nvim" } }
