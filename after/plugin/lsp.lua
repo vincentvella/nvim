@@ -89,5 +89,9 @@ lsp.setup({
 })
 
 vim.diagnostic.config({
-	virtual_text = true,
+	virtual_text = false,
 })
+
+vim.keymap.set("n", "<leader>vd", function()
+	vim.diagnostic.open_float(0, { scope = "line" })
+end, { buffer = 0, remap = false })
