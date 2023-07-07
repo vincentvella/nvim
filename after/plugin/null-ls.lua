@@ -49,6 +49,10 @@ null_ls.setup({
     null_ls.builtins.code_actions.gitsigns,
     null_ls.builtins.completion.luasnip,
 
+    -- Golang
+    null_ls.builtins.formatting.gofumpt,
+    null_ls.builtins.formatting.goimports_reviser,
+
     -- Spell check that has better tooling
     -- all stored locally
     -- https://github.com/streetsidesoftware/cspell

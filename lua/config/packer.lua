@@ -1,5 +1,4 @@
 -- PackerInstall | PackerClean to install and clean plugins
-vim.cmd([[packadd packer.nvim]])
 
 local ensure_packer = function()
 	local fn = vim.fn
