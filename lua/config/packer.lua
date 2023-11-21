@@ -92,7 +92,6 @@ return require("packer").startup(function(use)
 	use("github/copilot.vim")
 
 	-- Extras
-	use("theprimeagen/harpoon")
 	use("theprimeagen/refactoring.nvim")
 	use("mbbill/undotree")
 	use("tpope/vim-fugitive")
