@@ -31,6 +31,8 @@ vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz", { silent = true, desc = "Quickf
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz", { silent = true, desc = "Quickfix next line" })
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz", { silent = true, desc = "Quickfix previous line" })
 
+vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc")
+
 vim.keymap.set(
 	"n",
 	"<leader>fr",

@@ -3,6 +3,13 @@ return {
 		"github/copilot.vim",
 	},
 	{
+		"nvimdev/indentmini.nvim",
+		event = "BufEnter",
+		config = function()
+			require("indentmini").setup()
+		end,
+	},
+	{
 		"hrsh7th/nvim-cmp",
 		dependencies = {
 			"hrsh7th/cmp-emoji",
