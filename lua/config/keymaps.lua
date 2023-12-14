@@ -35,7 +35,7 @@ vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc")
 
 vim.keymap.set(
 	"n",
-	"<leader>fr",
+	"<leader>rc",
 	[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
 	{ silent = true, desc = "Find and replace for current word" }
 )
