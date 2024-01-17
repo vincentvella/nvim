@@ -6,10 +6,14 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 Setup Instuctions
 
 - [Install MesloLGS Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases)
-- brew install ripgrep
-- brew install nvim
-- brew install fd
+Install the following packages with Homebrew on MacOS, Chocolatey on Windows
+- ripgrep
+- nvim
+- fd
+- fzf
 - brew install jesseduffield/lazygit/lazygit
-- brew install --cask alacritty
+- Install Terminal
+  - Kitty (macOS): curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+  - WezTerm (Windows): choco install wezterm -y
 - alias vi/vim -> nvim
 - :Copilot setup
