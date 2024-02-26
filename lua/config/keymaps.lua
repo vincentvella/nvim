@@ -40,7 +40,7 @@ vim.keymap.set(
 	{ silent = true, desc = "Find and replace for current word" }
 )
 
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Chmod a file" })
+vim.keymap.set("n", "<leader>chmod", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Chmod a file" })
 
 -- Define a custom command to format the file with jq and save it
 vim.cmd([[command! JqFormat %!jq '.']])
