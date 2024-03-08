@@ -45,5 +45,7 @@ vim.keymap.set("n", "<leader>chmod", "<cmd>!chmod +x %<CR>", { silent = true, de
 -- Define a custom command to format the file with jq and save it
 vim.cmd([[command! JqFormat %!jq '.']])
 
+vim.keymap.set("n", "<leader>W", ":noautocmd w<CR>", { silent = true, desc = "Write a file without any autocmds" })
+
 -- Map a key to execute the custom command and exit without saving
 vim.api.nvim_set_keymap("n", "<Leader>jq", ":JqFormat<CR>:noa w<CR>:q!<CR>", { noremap = true, silent = true })
