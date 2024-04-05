@@ -26,4 +26,17 @@ return {
 			},
 		},
 	},
+	{
+		"NvChad/nvim-colorizer.lua",
+		opts = {
+			config = function()
+				require("colorizer").setup({
+					user_default_options = {
+						tailwind = true,
+						always_update = true,
+					},
+				})
+			end,
+		},
+	},
 }
