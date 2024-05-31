@@ -4,7 +4,7 @@ return {
 		opts = {
 			ensure_installed = {
 				"stylua",
-				"gopls",
+				-- "gopls",
 			},
 		},
 	},
@@ -16,7 +16,7 @@ return {
 			---@diagnostic disable: missing-fields
 			---@type lspconfig.options
 			servers = {
-				gopls = {},
+				-- gopls = {},
 				elixirls = {},
 				grammarly = {},
 				rust_analyzer = {},
