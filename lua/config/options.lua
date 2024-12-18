@@ -7,6 +7,7 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.cursorline = true
 vim.opt.termguicolors = true
+vim.g.snacks_animate = false
 
 vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
 vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
