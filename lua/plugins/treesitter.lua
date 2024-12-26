@@ -72,7 +72,25 @@ return {
 			"nvim-telescope/telescope.nvim",
 			"neovim/nvim-lspconfig",
 		},
-		opts = {},
+		opts = {
+			server = {
+				settings = {
+					experimental = {
+						classRegex = {
+							"tw`([^`]*)",
+							'tw="([^"]*)',
+							'tw={"([^"}]*)',
+							"tw\\.\\w+`([^`]*)",
+							"tw\\(.*?\\)`([^`]*)",
+							{ "clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)" },
+							{ "classnames\\(([^)]*)\\)", "'([^']*)'" },
+							{ "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" },
+							{ "cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)" },
+						},
+					},
+				},
+			},
+		},
 	},
 	{
 		"Wansmer/sibling-swap.nvim",
