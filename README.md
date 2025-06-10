@@ -5,8 +5,8 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 Setup Instuctions
 
-- [Install MesloLGS Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases)
-Install the following packages with Homebrew on MacOS, Chocolatey on Windows
+- [Install CommitMono Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases)
+  Install the following packages with Homebrew on MacOS, Chocolatey on Windows
 - ripgrep
 - nvim
 - fd
