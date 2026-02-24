@@ -31,13 +31,34 @@ vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz", { silent = true, desc = "Quickf
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz", { silent = true, desc = "Quickfix next line" })
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz", { silent = true, desc = "Quickfix previous line" })
 
-vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc")
+vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", { desc = "Show hover documentation" })
+vim.keymap.set("n", "<leader>K", "<cmd>Lspsaga peek_definition<CR>", { desc = "Peek definition" })
+vim.keymap.set("n", "<leader>h", "<cmd>Lspsaga signature_help<CR>", { desc = "Signature help" })
+
+-- Essential LSP keybindings
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
+vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
+vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Go to references" })
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
+vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show diagnostic" })
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
+
+-- LSP Saga specific keybindings
+vim.keymap.set("n", "<leader>o", "<cmd>Lspsaga outline<CR>", { desc = "Toggle outline" })
+vim.keymap.set("n", "<leader>t", "<cmd>Lspsaga term_toggle<CR>", { desc = "Toggle terminal" })
+vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", { desc = "Code action" })
+vim.keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", { desc = "Rename symbol" })
+vim.keymap.set("n", "<leader>gd", "<cmd>Lspsaga goto_definition<CR>", { desc = "Go to definition (LSP Saga)" })
+vim.keymap.set("n", "<leader>gr", "<cmd>Lspsaga finder<CR>", { desc = "Find references" })
 
 vim.keymap.set(
-	"n",
-	"<leader>rc",
-	[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
-	{ silent = true, desc = "Find and replace for current word" }
+  "n",
+  "<leader>rc",
+  [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+  { silent = true, desc = "Find and replace for current word" }
 )
 
 vim.keymap.set("n", "<leader>chmod", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Chmod a file" })
@@ -49,3 +70,5 @@ vim.keymap.set("n", "<leader>W", ":noautocmd w<CR>", { silent = true, desc = "Wr
 
 -- Map a key to execute the custom command and exit without saving
 vim.api.nvim_set_keymap("n", "<Leader>jq", ":JqFormat<CR>:noa w<CR>:q!<CR>", { noremap = true, silent = true })
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here

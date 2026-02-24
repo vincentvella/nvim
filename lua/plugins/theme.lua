@@ -4,6 +4,9 @@ return {
 		name = "catppuccin",
 		priority = 1000,
 		lazy = false,
+		opts = function(_, opts)
+			return opts
+		end,
 
 		config = function()
 			require("catppuccin").setup({

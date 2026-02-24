@@ -6,4 +6,5 @@ debug
 foo.*
 *.log
 data
-plugin/packer_compiled.lua
+lua/.DS_Store
+.DS_Store

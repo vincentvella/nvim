@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "Bash(nvim:*)",
+      "Bash(~/.local/share/bob/v0.11.6/nvim-macos-arm64/bin/nvim:*)",
+      "Bash(/opt/homebrew/bin/nvim:*)",
+      "Bash(ls:*)"
+    ]
+  }
+}
