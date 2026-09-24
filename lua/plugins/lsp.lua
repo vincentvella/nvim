@@ -17,7 +17,6 @@ return {
         "prettierd",
         "prettier",
         "eslint_d",
-        "eslint",
       },
     },
   },
@@ -35,8 +34,6 @@ return {
         elixirls = {
           filetypes = { "elixir", "eelixir", "heex" },
         },
-
-        grammarly = {}, -- leave open (multi-language)
 
         rust_analyzer = {
           filetypes = { "rust" },

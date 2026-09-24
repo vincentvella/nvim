@@ -19,11 +19,9 @@ vim.keymap.set("x", "<leader>p", [["_dP]], { silent = true, desc = "Pasting over
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yanked into the system clipboard" })
 vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yanked into the system clipboard" })
 
-vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { silent = true, desc = "Deletes to the void register" })
+vim.keymap.set("v", "<leader>d", [["_d]], { silent = true, desc = "Deletes to the void register" })
 
 vim.keymap.set("n", "Q", "<nop>", { silent = true, desc = "Don't press capital Q... ever" })
-
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { silent = true, desc = "Formatting buffer..." })
 
 -- Quickfix navigation
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz", { silent = true, desc = "Quickfix next" })
@@ -31,25 +29,18 @@ vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz", { silent = true, desc = "Quickf
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz", { silent = true, desc = "Quickfix next line" })
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz", { silent = true, desc = "Quickfix previous line" })
 
-vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", { desc = "Show hover documentation" })
 vim.keymap.set("n", "<leader>K", "<cmd>Lspsaga peek_definition<CR>", { desc = "Peek definition" })
 vim.keymap.set("n", "<leader>h", "<cmd>Lspsaga signature_help<CR>", { desc = "Signature help" })
 
--- Essential LSP keybindings
-vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
-vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
+-- LSP keybindings (LazyVim already maps gd, gD, gr, K and <leader>ca in LSP buffers)
 vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
-vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Go to references" })
-vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })
-vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show diagnostic" })
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
+vim.keymap.set("n", "[d", function() vim.diagnostic.jump({ count = -1, float = true }) end, { desc = "Previous diagnostic" })
+vim.keymap.set("n", "]d", function() vim.diagnostic.jump({ count = 1, float = true }) end, { desc = "Next diagnostic" })
 
 -- LSP Saga specific keybindings
 vim.keymap.set("n", "<leader>o", "<cmd>Lspsaga outline<CR>", { desc = "Toggle outline" })
 vim.keymap.set("n", "<leader>t", "<cmd>Lspsaga term_toggle<CR>", { desc = "Toggle terminal" })
-vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", { desc = "Code action" })
 vim.keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", { desc = "Rename symbol" })
 vim.keymap.set("n", "<leader>gd", "<cmd>Lspsaga goto_definition<CR>", { desc = "Go to definition (LSP Saga)" })
 vim.keymap.set("n", "<leader>gr", "<cmd>Lspsaga finder<CR>", { desc = "Find references" })
