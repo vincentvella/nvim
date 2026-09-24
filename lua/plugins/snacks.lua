@@ -1,2 +1,16 @@
 -- Snacks config - using defaults from lazyvim.plugins.ui
-return {}
+return {
+  {
+    "folke/snacks.nvim",
+    opts = {
+      picker = {
+        sources = {
+          explorer = {
+            hidden = true,
+            ignored = true,
+          },
+        },
+      },
+    },
+  },
+}
